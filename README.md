@@ -1,6 +1,6 @@
 # TestPilot
 
-Protótipo local para um seminário: gera um teste, solicita aprovação, executa Chromium com Playwright e propõe reparos de seletores. CLI, dashboard e relatório HTML consultam o mesmo histórico em arquivos. Interface e documentação em português.
+Protótipo local: gera um teste, solicita aprovação, executa Chromium com Playwright e propõe reparos de seletores. CLI, dashboard e relatório HTML consultam o mesmo histórico em arquivos. Interface e documentação em português.
 
 O **simulador**, padrão e sem custo de API, fornece código predefinido para a demo e executa testes reais. **OpenRouter** permite geração livre com modelo configurado pelo usuário. O provedor de cada execução aparece nos relatórios; erros do modo real nunca acionam o simulador automaticamente.
 

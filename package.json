@@ -1,0 +1,20 @@
+{
+  "name": "testpilot-local",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MVP local de geração, execução e recuperação de testes com aprovação humana",
+  "bin": { "testpilot": "dist/cli.js" },
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc && node scripts/copy-assets.mjs",
+    "check": "tsc --noEmit && tsc --project tsconfig.tests.json",
+    "test": "node --import tsx --test tests/core.test.ts",
+    "test:integration": "npm run build && node --import tsx --test tests/integration.test.ts",
+    "demo": "node --import tsx demo/server.ts",
+    "dashboard": "node dist/cli.js dashboard",
+    "testpilot": "node --import tsx src/cli.ts"
+  },
+  "dependencies": { "@playwright/test": "^1.56.1", "commander": "^14.0.2", "diff": "^8.0.2", "typescript": "^5.9.3" },
+  "devDependencies": { "@types/node": "^22.19.0", "tsx": "^4.20.6" }
+}

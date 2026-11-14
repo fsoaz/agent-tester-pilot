@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TestPilot · Central de execuções</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body>
+<aside class="rail"><a class="brand" href="/" aria-label="TestPilot início"><span class="logo">↗</span><span>TestPilot<span class="brand-dot">.</span></span></a><span class="workspace">WORKSPACE LOCAL</span><div class="nav-item"><span>▦</span> Execuções <span class="nav-count" id="run-count">0</span></div><div class="rail-bottom"><span class="live-dot"></span> Arquivos locais<br><small>CLI → Playwright → Evidências</small></div></aside>
+<main>
+<header><div><p class="eyebrow">QUALIDADE, COM EVIDÊNCIAS</p><h1>Central de execuções</h1><p class="subtitle">Do requisito ao resultado. Acompanhe cada decisão.</p></div><div class="header-actions"><span id="sync" role="status">Conectando…</span><button id="refresh" class="secondary">↻ Atualizar</button></div></header>
+<div id="alert" class="alert" role="alert" hidden></div>
+<section class="metrics" aria-label="Resumo por cenário">
+<article><span>Gerados</span><strong id="generated">0</strong><small>Cenários independentes</small></article>
+<article><span>Aprovados</span><strong id="approved">0</strong><small>Revisão registrada</small></article>
+<article><span>Passaram</span><strong id="passed">0</strong><small>Resultado final mais recente</small></article>
+<article><span>Falharam</span><strong id="failed">0</strong><small>Inclui erros operacionais</small></article>
+<article class="recovered-card"><span>Recuperados <span>✧</span></span><strong id="recovered">0</strong><small>Passaram após reparo aprovado</small></article>
+</section>
+<section class="results"><div class="section-heading"><h2>Histórico de execuções <span id="attempt-count">0 tentativas</span></h2><span class="readonly">SOMENTE LEITURA</span></div><div class="toolbar"><label class="search-label"><span>⌕</span><input id="search" type="search" placeholder="Pesquisar requisito…" aria-label="Pesquisar requisito"></label><select id="status" aria-label="Filtrar status"><option value="">Todos os status</option><option value="active">Em andamento</option><option value="passed">Passaram</option><option value="recovered">Recuperados</option><option value="failed">Falharam</option><option value="cancelled">Cancelados</option><option value="error">Erro operacional</option></select><select id="provider" aria-label="Filtrar provedor"><option value="">Todos os provedores</option><option value="mock">Simulador</option><option value="openrouter">OpenRouter</option></select></div><div class="split"><div id="runs" class="run-list" aria-label="Execuções anteriores"></div><div id="detail" class="detail" aria-live="polite"><div class="empty"><span>↗</span><h3>Um lugar para cada evidência.</h3><p>Selecione uma execução para explorar o código,<br>as aprovações e a sequência de tentativas.</p></div></div></div></section>
+<footer><span>Gere, aprove e reexecute pelo terminal.</span><code>testpilot generate "login" --url http://127.0.0.1:3000</code></footer>
+</main></body></html>
